@@ -1,0 +1,7 @@
+ext.Plugins = [
+	ANDROID_APPLICATION: "com.android.application",
+	ANDROID_LIBRARY    : "com.android.library",
+	KOTLIN_ANDROID     : "kotlin-android",
+	KOTLIN_KAPT        : "kotlin-kapt",
+	HILT_PLUGIN        : "dagger.hilt.android.plugin"
+]

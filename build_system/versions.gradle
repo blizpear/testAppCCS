@@ -1,0 +1,20 @@
+ext.Versions = [
+	KOTLIN             : "1.6.10",
+	COROUTINES         : "1.6.0",
+	GRADLE             : '7.2.1',
+	ANDROIDX_CORE      : "1.7.0",
+	APP_COMPAT         : "1.4.1",
+	LIFECYCLE          : "2.4.1",
+	MOSHI              : "1.13.0",
+	RETROFIT           : "2.9.0",
+	OKHTTP             : "4.9.0",
+	MATERIAL           : "1.5.0",
+	FRAGMENT           : "1.4.1",
+	CONSTRAINT_LAYOUT  : "2.0.4",
+	CICERONE           : "7.1",
+	GLIDE              : "4.13.1",
+	RECYCLER_VIEW      : "1.2.1",
+	LOGGING_INTERCEPTOR: "4.9.3",
+	ROOM               : "2.4.1",
+	HILT               : "2.38.1"
+]

@@ -1,0 +1,35 @@
+apply from: 'build_system/versions.gradle'
+ext.Dependencies = [
+	GRADLE                 : "com.android.tools.build:gradle:${Versions.GRADLE}",
+
+	KOTLIN                 : "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}",
+	KOTLIN_STANDARD_LIBRARY: "org.jetbrains.kotlin:kotlin-stdlib:${Versions.KOTLIN}",
+
+	HILT_ANDROID_PLUGIN    : "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}",
+	HILT                   : "com.google.dagger:hilt-android:${Versions.HILT}",
+	HILT_COMPILER          : "com.google.dagger:hilt-android-compiler:${Versions.HILT}",
+
+
+	LIFECYCLE_VIEWMODEL    : "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE}",
+	LIFECYCLE_RUNTIME      : "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE}",
+	COROUTINES_CORE        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.COROUTINES}",
+
+	RETROFIT               : "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}",
+	RETROFIT_MOSHI         : "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}",
+	MOSHI                  : "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI}",
+	LOGGING_INTERCEPTOR    : "com.squareup.okhttp3:logging-interceptor:${Versions.LOGGING_INTERCEPTOR}",
+
+	MATERIAL               : "com.google.android.material:material:${Versions.MATERIAL}",
+	ANDROIDX_CORE          : "androidx.core:core-ktx:${Versions.ANDROIDX_CORE}",
+	APP_COMPAT             : "androidx.appcompat:appcompat:${Versions.APP_COMPAT}",
+	CONSTRAINT_LAYOUT      : "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}",
+	RECYCLER_VIEW          : "androidx.recyclerview:recyclerview:${Versions.RECYCLER_VIEW}",
+
+	CICERONE               : "com.github.terrakok:cicerone:${Versions.CICERONE}",
+	FRAGMENT               : "androidx.fragment:fragment-ktx:${Versions.FRAGMENT}",
+	GLIDE                  : "com.github.bumptech.glide:glide:${Versions.GLIDE}",
+
+	ROOM_RUNTIME           : "androidx.room:room-runtime:${Versions.ROOM}",
+	ROOM_COMPILER          : "androidx.room:room-compiler:${Versions.ROOM}",
+	ROOM_KTX               : "androidx.room:room-ktx:${Versions.ROOM}",
+]
