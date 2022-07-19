@@ -11,6 +11,8 @@ dependencies {
 	implementation Dependencies.HILT
 	kapt Dependencies.HILT_COMPILER
 	implementation Dependencies.CICERONE
+	implementation Dependencies.ACTIVITY_KTX
 
-
+	implementation project(":features:popularScreen")
+	implementation project(":features:favoriteScreen")
 }

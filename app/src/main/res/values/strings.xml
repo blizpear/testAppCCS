@@ -1,3 +1,5 @@
 <resources>
 	<string name="app_name">testAppCCS</string>
+	<string name="popular">Популярное</string>
+	<string name="favorite">Избранное</string>
 </resources>

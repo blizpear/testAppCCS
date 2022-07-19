@@ -9,6 +9,7 @@ ext.Dependencies = [
 	HILT                   : "com.google.dagger:hilt-android:${Versions.HILT}",
 	HILT_COMPILER          : "com.google.dagger:hilt-android-compiler:${Versions.HILT}",
 
+	ACTIVITY_KTX           : "androidx.activity:activity-ktx:${Versions.ACTIVITY_KTX}",
 
 	LIFECYCLE_VIEWMODEL    : "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE}",
 	LIFECYCLE_RUNTIME      : "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE}",
