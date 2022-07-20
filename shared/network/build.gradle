@@ -1,0 +1,16 @@
+apply plugin: Plugins.ANDROID_LIBRARY
+apply plugin: Plugins.KOTLIN_ANDROID
+apply plugin: Plugins.KOTLIN_KAPT
+apply plugin: Plugins.HILT_PLUGIN
+
+apply from: "$rootDir/build_system/androidLibrary.gradle"
+
+dependencies {
+
+	implementation Dependencies.RETROFIT
+	implementation Dependencies.RETROFIT_MOSHI
+	implementation Dependencies.MOSHI
+	implementation Dependencies.LOGGING_INTERCEPTOR
+	implementation Dependencies.HILT
+	kapt Dependencies.HILT_COMPILER
+}
