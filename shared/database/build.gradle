@@ -1,0 +1,16 @@
+apply plugin: Plugins.ANDROID_LIBRARY
+apply plugin: Plugins.KOTLIN_ANDROID
+apply plugin: Plugins.KOTLIN_KAPT
+apply plugin: Plugins.HILT_PLUGIN
+
+apply from: "$rootDir/build_system/androidLibrary.gradle"
+
+dependencies {
+
+	implementation Dependencies.ROOM_RUNTIME
+	implementation Dependencies.ROOM_KTX
+	kapt Dependencies.ROOM_COMPILER
+	kapt Dependencies.SQLITE
+	implementation Dependencies.HILT
+	kapt Dependencies.HILT_COMPILER
+}

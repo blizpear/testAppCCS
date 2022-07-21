@@ -15,7 +15,8 @@ ext.Versions = [
 	GLIDE              : "4.13.1",
 	RECYCLER_VIEW      : "1.2.1",
 	LOGGING_INTERCEPTOR: "4.9.3",
-	ROOM               : "2.4.1",
-	HILT               : "2.38.1",
-	ACTIVITY_KTX       : "1.5.0"
+	ROOM               : "2.4.2",
+	HILT               : "2.42",
+	ACTIVITY_KTX       : "1.5.0",
+	SQLITE             : "3.36.0.3"
 ]
