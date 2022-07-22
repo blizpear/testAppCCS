@@ -1,5 +1,5 @@
 package com.blizpear.testappccs.navigation
 
-import com.blizpear.testAppCCS.features.popularScreen.getPopularScreen
+import com.blizpear.testAppCCS.features.popularScreen.getPopularExchangeScreen
 
-fun provideRootScreen() = getPopularScreen()
+fun provideRootScreen() = getPopularExchangeScreen()
