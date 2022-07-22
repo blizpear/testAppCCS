@@ -1,0 +1,15 @@
+apply plugin: Plugins.ANDROID_LIBRARY
+apply plugin: Plugins.KOTLIN_ANDROID
+apply plugin: Plugins.KOTLIN_KAPT
+apply plugin: Plugins.HILT_PLUGIN
+
+apply from: "$rootDir/build_system/androidLibrary.gradle"
+
+dependencies {
+
+	implementation Dependencies.FRAGMENT
+	implementation Dependencies.LIFECYCLE_RUNTIME
+	implementation Dependencies.MATERIAL
+	implementation Dependencies.HILT
+	kapt Dependencies.HILT_COMPILER
+}
