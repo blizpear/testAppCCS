@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="filter_dialog_alphabet">По алфавиту</string>
+	<string name="filter_dialog_value">По значению валют</string>
+	<string name="filter_dialog_asc">По возрастанию</string>
+	<string name="filter_dialog_desc">По убыванию</string>
+	<string name="filter_dialog_accept">Подтвердить</string>
+	<string name="filter_dialog_decline">Отменить</string>
+</resources>

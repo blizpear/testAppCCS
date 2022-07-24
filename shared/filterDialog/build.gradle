@@ -19,10 +19,6 @@ dependencies {
 	implementation Dependencies.MATERIAL
 	implementation Dependencies.GLIDE
 	implementation Dependencies.RECYCLER_VIEW
-	implementation Dependencies.FRAGMENT
 
-	implementation project(":shared:network")
-	implementation project(":shared:database")
 	implementation project(":shared:ui")
-	implementation project(":shared:filterDialog")
 }
