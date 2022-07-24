@@ -14,12 +14,15 @@ import com.blizpear.testAppCCS.features.popularScreen.databinding.PopularExchang
 import com.blizpear.testAppCCS.features.popularScreen.presentation.PopularExchangeScreenViewModel
 import com.blizpear.testAppCCS.features.popularScreen.presentation.PopularExchangeState
 import com.blizpear.testAppCCS.features.popularScreen.ui.adapters.ExchangeAdapter
+import com.blizpear.testAppCCS.shared.filterdialog.FilterDialogFragment
 import com.blizpear.testAppCCS.shared.ui.BaseFragment
+import com.blizpear.testAppCCS.shared.ui.showCustomDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class PopularExchangeScreenFragment :
-	BaseFragment<PopularExchangeFragmentBinding>(R.layout.popular_exchange_fragment) {
+	BaseFragment<PopularExchangeFragmentBinding>(R.layout.popular_exchange_fragment),
+	FilterDialogFragment.FilterDialogFragmentListener {
 
 	companion object {
 
@@ -55,7 +58,9 @@ class PopularExchangeScreenFragment :
 		}
 
 		binding.filter.setOnClickListener {
-			Toast.makeText(requireContext(), "filter clicked", Toast.LENGTH_SHORT).show()
+			val filterDialogFragment =
+				FilterDialogFragment.newInstance(viewModel.currentSortType)
+			showCustomDialog(filterDialogFragment)
 		}
 	}
 
@@ -106,6 +111,10 @@ class PopularExchangeScreenFragment :
 			binding.currency.text = getString(R.string.currency, state.baseCurrency)
 			exchangeAdapter.submitList(state.data)
 		}
+	}
+
+	override fun onDialogCloseResult(requestCode: Int) {
+		viewModel.setFilter(requestCode)
 	}
 
 	override fun getBinding(inflater: LayoutInflater, container: ViewGroup?): PopularExchangeFragmentBinding =
