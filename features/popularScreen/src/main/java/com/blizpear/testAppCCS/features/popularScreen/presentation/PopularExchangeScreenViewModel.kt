@@ -69,7 +69,8 @@ class PopularExchangeScreenViewModel @Inject constructor(
 					}
 					setBaseCurrency(baseCurrency?.currencyName)
 
-					_state.value = PopularExchangeState.Content(newExchanges.sortedBy { it.currencyName }, _baseCurrency)
+					_state.value = PopularExchangeState.Content(newExchanges, _baseCurrency)
+					setFilter()
 				}
 			}.launchIn(viewModelScope)
 	}
@@ -108,7 +109,7 @@ class PopularExchangeScreenViewModel @Inject constructor(
 		} else false
 	}
 
-	fun setFilter(type: Int) {
+	fun setFilter(type: Int = currentSortType) {
 		if (_state.value is PopularExchangeState.Content) {
 
 			val oldContent = _state.value as PopularExchangeState.Content
