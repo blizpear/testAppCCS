@@ -3,6 +3,9 @@
 	<dimen name="width_0">0dp</dimen>
 	<dimen name="height_0">0dp</dimen>
 	<dimen name="margin_16">16dp</dimen>
+	<dimen name="padding_16">16dp</dimen>
+
+	<dimen name="min_width_custom_dialog">320dp</dimen>
 
 	<dimen name="layout_width_32dp">32dp</dimen>
 	<dimen name="layout_height_32dp">32dp</dimen>
