@@ -1,6 +1,6 @@
 package com.blizpear.testappccs.di
 
-import com.blizpear.testappccs.navigation.provideRootScreen
+import com.blizpear.testappccs.navigation.getCicerone
 import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.Router
 import dagger.Module
@@ -15,9 +15,7 @@ object GlobalNavigationModule {
 
 	@Provides
 	@Singleton
-	fun provideCicerone(): Cicerone<Router> = Cicerone.create().apply {
-		router.newRootScreen(provideRootScreen())
-	}
+	fun provideCicerone(): Cicerone<Router> = getCicerone()
 
 	@Provides
 	@Singleton

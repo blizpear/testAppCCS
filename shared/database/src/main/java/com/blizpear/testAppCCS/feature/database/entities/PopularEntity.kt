@@ -10,5 +10,6 @@ data class PopularEntity(
 	@PrimaryKey(autoGenerate = false)
 	val currencyName: String,
 	val currencyValue: Double,
-	val isBase: Boolean = false
+	val isBase: Boolean = false,
+	var isFavorite: Boolean = false
 )

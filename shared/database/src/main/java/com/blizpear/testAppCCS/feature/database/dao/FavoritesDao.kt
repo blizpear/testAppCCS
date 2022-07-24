@@ -6,7 +6,6 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
 import com.blizpear.testAppCCS.feature.database.entities.FavoritesEntity
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface FavoritesDao {
@@ -24,5 +23,5 @@ interface FavoritesDao {
 	}
 
 	@Query("SELECT * FROM favorites_table")
-	fun getFavorites(): Flow<List<FavoritesEntity>>
+	fun getFavorites(): List<FavoritesEntity>
 }

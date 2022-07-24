@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="width_0">0dp</dimen>
+	<dimen name="height_0">0dp</dimen>
+	<dimen name="margin_16">16dp</dimen>
+
+	<dimen name="layout_width_32dp">32dp</dimen>
+	<dimen name="layout_height_32dp">32dp</dimen>
+	<dimen name="layout_margin_vertical_4dp">4dp</dimen>
+	<dimen name="layout_margin_16dp">16dp</dimen>
+
+	<dimen name="text_size_18sp">18sp</dimen>
+	<dimen name="text_size_toolbar">22sp</dimen>
+
+	<dimen name="image_icon_size">32dp</dimen>
+</resources>

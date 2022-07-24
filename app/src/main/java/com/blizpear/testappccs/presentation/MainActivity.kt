@@ -1,12 +1,10 @@
 package com.blizpear.testappccs.presentation
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.blizpear.testAppCCS.features.favoriteScreen.FavoriteScreenFragment
-import com.blizpear.testAppCCS.features.popularScreen.PopularScreenFragment
+import com.blizpear.testAppCCS.features.popularScreen.ui.PopularExchangeScreenFragment
 import com.blizpear.testappccs.R
 import com.blizpear.testappccs.databinding.ActivityMainBinding
 import com.blizpear.testappccs.viewModel.MainActivityViewModel
@@ -49,19 +47,14 @@ class MainActivity : AppCompatActivity() {
 	}
 
 	override fun onBackPressed() {
-
-		Log.d("trahtrahich", "НАЖАЛИ НАЗАД")
-
 		super.onBackPressed()
 
-		val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
-
-		when (currentFragment) {
-			is FavoriteScreenFragment -> {
+		when (supportFragmentManager.findFragmentById(R.id.fragment_container)) {
+			is FavoriteScreenFragment        -> {
 				binding.bottomNav.selectedItemId = R.id.favorite_item
 			}
 
-			is PopularScreenFragment  -> {
+			is PopularExchangeScreenFragment -> {
 				binding.bottomNav.selectedItemId = R.id.popular_item
 			}
 		}
