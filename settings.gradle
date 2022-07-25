@@ -1,7 +1,10 @@
 rootProject.name = "TestAppCCS"
 include ':app'
+
 include ':features:popularScreen'
 include ':features:favoriteScreen'
+include ':features:changeCurrencyScreen'
+
 include ':shared:network'
 include ':shared:database'
 include ':shared:ui'

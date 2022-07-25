@@ -15,6 +15,7 @@ dependencies {
 
 	implementation project(":features:popularScreen")
 	implementation project(":features:favoriteScreen")
+	implementation project(":features:changeCurrencyScreen")
 	implementation project(":shared:ui")
 	implementation project(":shared:filterDialog")
 }
