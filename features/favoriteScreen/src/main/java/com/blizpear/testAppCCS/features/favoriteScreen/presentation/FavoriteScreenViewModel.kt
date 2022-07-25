@@ -88,7 +88,6 @@ class FavoriteScreenViewModel @Inject constructor(
 				}
 				saveFavoritesUseCase(newExchangeList)
 			}
-
 		}
 	}
 }
