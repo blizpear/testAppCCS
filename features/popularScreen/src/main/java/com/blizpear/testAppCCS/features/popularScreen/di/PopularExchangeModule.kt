@@ -1,7 +1,7 @@
 package com.blizpear.testAppCCS.features.popularScreen.di
 
-import com.blizpear.testAppCCS.feature.database.dao.FavoritesDao
 import com.blizpear.testAppCCS.feature.database.dao.ExchangeDao
+import com.blizpear.testAppCCS.feature.database.dao.FavoritesDao
 import com.blizpear.testAppCCS.features.popularScreen.data.api.ExchangeApi
 import com.blizpear.testAppCCS.features.popularScreen.data.datasource.PopularExchangeDatasource
 import com.blizpear.testAppCCS.features.popularScreen.data.datasource.PopularExchangeDatasourceImpl

@@ -8,8 +8,23 @@
         <entry key="app/src/main/res/drawable/ic_favorite_enabled.xml" value="0.4795" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5244791666666667" />
         <entry key="app/src/main/res/menu/menu_bottom_nav.xml" value="0.5234375" />
+        <entry key="features/changeCurrencyScreen/src/main/res/layout/change_currency_fragment.xml" value="0.28958333333333336" />
+        <entry key="features/changeCurrencyScreen/src/main/res/layout/currency_item.xml" value="0.28854166666666664" />
+        <entry key="features/favoriteScreen/src/main/res/layout/exchange_item.xml" value="0.28958333333333336" />
+        <entry key="features/favoriteScreen/src/main/res/layout/favorite_fragment.xml" value="0.28958333333333336" />
         <entry key="features/favoriteScreen/src/main/res/layout/fragment_blank.xml" value="0.28958333333333336" />
-        <entry key="features/popularScreen/src/main/res/layout/fragment_blank.xml" value="0.5244791666666667" />
+        <entry key="features/favoriteScreen/src/main/res/layout/popular_exchange_fragment.xml" value="0.28958333333333336" />
+        <entry key="features/popularScreen/src/main/res/layout/exchange_item.xml" value="0.28958333333333336" />
+        <entry key="features/popularScreen/src/main/res/layout/fragment_blank.xml" value="0.1" />
+        <entry key="features/popularScreen/src/main/res/layout/popular_exchange_fragment.xml" value="0.3596014492753623" />
+        <entry key="shared/filterDialog/src/main/res/layout/filter_dialog_fragment.xml" value="0.1" />
+        <entry key="shared/ui/src/main/res/drawable-night/filter.xml" value="0.2935" />
+        <entry key="shared/ui/src/main/res/drawable-night/star.xml" value="0.2935" />
+        <entry key="shared/ui/src/main/res/drawable-night/swap.xml" value="0.2935" />
+        <entry key="shared/ui/src/main/res/drawable/empty_star.xml" value="0.26" />
+        <entry key="shared/ui/src/main/res/drawable/filter.xml" value="0.2935" />
+        <entry key="shared/ui/src/main/res/drawable/swap.xml" value="0.2935" />
+        <entry key="shared/ui/src/main/res/drawable/yellow_star.xml" value="0.26" />
       </map>
     </option>
   </component>

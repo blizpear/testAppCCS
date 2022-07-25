@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 		super.onBackPressed()
 
 		when (supportFragmentManager.findFragmentById(R.id.fragment_container)) {
-			is FavoriteScreenFragment -> {
+			is FavoriteScreenFragment        -> {
 				binding.bottomNav.selectedItemId = R.id.favorite_item
 			}
 

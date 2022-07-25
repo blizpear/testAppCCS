@@ -1,7 +1,7 @@
 package com.blizpear.testAppCCS.features.popularScreen.data.mappers
 
-import com.blizpear.testAppCCS.feature.database.entities.FavoritesEntity
 import com.blizpear.testAppCCS.feature.database.entities.ExchangeEntity
+import com.blizpear.testAppCCS.feature.database.entities.FavoritesEntity
 import com.blizpear.testAppCCS.features.popularScreen.data.models.PopularExchangeModel
 import com.blizpear.testAppCCS.features.popularScreen.domain.entity.PopularExchange
 import kotlinx.coroutines.flow.Flow
