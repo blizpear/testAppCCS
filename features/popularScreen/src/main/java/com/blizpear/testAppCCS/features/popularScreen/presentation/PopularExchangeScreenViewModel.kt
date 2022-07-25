@@ -25,7 +25,8 @@ class PopularExchangeScreenViewModel @Inject constructor(
 ) : ViewModel() {
 
 	private val _state = MutableStateFlow<PopularExchangeState>(PopularExchangeState.Initialize)
-	val state = _state.asStateFlow()
+	val state
+		get() = _state.asStateFlow()
 
 	private var _baseCurrency: String = "USD"
 
@@ -67,7 +68,9 @@ class PopularExchangeScreenViewModel @Inject constructor(
 					val baseCurrency = newExchanges.find {
 						it.isBase
 					}
-					setBaseCurrency(baseCurrency?.currencyName)
+					if (baseCurrency != null) {
+						setBaseCurrency(baseCurrency.currencyName)
+					}
 
 					_state.value = PopularExchangeState.Content(newExchanges, _baseCurrency)
 					setFilter()
@@ -75,7 +78,14 @@ class PopularExchangeScreenViewModel @Inject constructor(
 			}.launchIn(viewModelScope)
 	}
 
-	fun setBaseCurrency(value: String?) {
+	private fun setBaseCurrency(value: String?) {
+		if (!value.isNullOrBlank()) {
+			setToSharedPref(value)
+			_baseCurrency = value
+		}
+	}
+
+	fun updateBaseCurrency(value: String?){
 		if (!value.isNullOrBlank() && _baseCurrency != value) {
 			setToSharedPref(value)
 			_baseCurrency = value
@@ -91,8 +101,8 @@ class PopularExchangeScreenViewModel @Inject constructor(
 		}
 	}
 
-	fun setFavorite(currencyName: String): Boolean {
-		return if (_state.value is PopularExchangeState.Content) {
+	fun setFavorite(currencyName: String)  {
+		if (_state.value is PopularExchangeState.Content) {
 			viewModelScope.launch {
 				val exchangesList = (_state.value as PopularExchangeState.Content).data
 
@@ -105,8 +115,7 @@ class PopularExchangeScreenViewModel @Inject constructor(
 				}
 				saveFavoritesUseCase(newExchangeList)
 			}
-			true
-		} else false
+		}
 	}
 
 	fun setFilter(type: Int = currentSortType) {

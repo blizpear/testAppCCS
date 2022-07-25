@@ -26,7 +26,7 @@ class ExchangeHolder(
 		onFavoriteClick: (String) -> Unit
 	) {
 		binding.exchangeText.text = binding.root.context.getString(
-			R.string.exchange,
+			R.string.popular_screen_exchange,
 			popularExchange.currencyName.uppercase(Locale.getDefault()),
 			popularExchange.currencyValue
 		)

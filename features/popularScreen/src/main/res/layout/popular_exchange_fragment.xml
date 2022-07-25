@@ -17,7 +17,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginEnd="@dimen/layout_margin_16dp"
-			android:text="@string/toolbar"
+			android:text="@string/popular_screen_toolbar"
 			android:textSize="@dimen/text_size_toolbar"
 			android:textStyle="bold"
 			android:maxLines="1"
@@ -43,13 +43,13 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:gravity="center_horizontal"
-				android:text="@string/error"/>
+				android:text="@string/popular_screen_error"/>
 
 			<Button
 				android:id="@+id/retry_button"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="@string/retry"/>
+				android:text="@string/popular_screen_retry"/>
 		</LinearLayout>
 
 		<LinearLayout
@@ -73,7 +73,7 @@
 					android:layout_height="wrap_content"
 					android:layout_margin="@dimen/margin_16"
 					android:textSize="@dimen/text_size_18sp"
-					android:text="@string/currency"/>
+					android:text="@string/popular_screen_currency"/>
 
 				<Space
 					android:layout_width="@dimen/width_0"
