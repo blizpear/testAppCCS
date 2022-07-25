@@ -3,7 +3,7 @@ package com.blizpear.testappccs.presentation
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.blizpear.testAppCCS.features.favoriteScreen.FavoriteScreenFragment
+import com.blizpear.testAppCCS.features.favoriteScreen.ui.FavoriteScreenFragment
 import com.blizpear.testAppCCS.features.popularScreen.ui.PopularExchangeScreenFragment
 import com.blizpear.testappccs.R
 import com.blizpear.testappccs.databinding.ActivityMainBinding
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 		super.onBackPressed()
 
 		when (supportFragmentManager.findFragmentById(R.id.fragment_container)) {
-			is FavoriteScreenFragment        -> {
+			is FavoriteScreenFragment -> {
 				binding.bottomNav.selectedItemId = R.id.favorite_item
 			}
 
