@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="exchange">%1$s : %2$s</string>
-	<string name="toolbar">Популярное</string>
-	<string name="error">Произошла ошибка</string>
-	<string name="retry">Повторить</string>
-	<string name="currency">Текущая валюта: %1$s</string>
+	<string name="popular_screen_exchange">%1$s : %2$s</string>
+	<string name="popular_screen_toolbar">Популярное</string>
+	<string name="popular_screen_error">Произошла ошибка</string>
+	<string name="popular_screen_retry">Повторить</string>
+	<string name="popular_screen_currency">Текущая валюта: %1$s</string>
 </resources>

@@ -45,7 +45,6 @@ class PopularExchangeScreenFragment :
 		exchangeAdapter = ExchangeAdapter(viewModel::setFavorite)
 		binding.exchangeList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 		binding.exchangeList.adapter = exchangeAdapter
-		binding.exchangeList.scrollToPosition(0)
 	}
 
 	private fun setListener() {
@@ -108,7 +107,7 @@ class PopularExchangeScreenFragment :
 
 			content.isVisible = true
 
-			binding.currency.text = getString(R.string.currency, state.baseCurrency)
+			binding.currency.text = getString(R.string.popular_screen_currency, state.baseCurrency)
 			exchangeAdapter.submitList(state.data) {
 				binding.exchangeList.scrollToPosition(0)
 			}
