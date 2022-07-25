@@ -3,7 +3,7 @@ package com.blizpear.testAppCCS.feature.database.di
 import android.content.Context
 import androidx.room.Room
 import com.blizpear.testAppCCS.feature.database.dao.FavoritesDao
-import com.blizpear.testAppCCS.feature.database.dao.ExchangeDao
+import com.blizpear.testAppCCS.feature.database.dao.PopularDao
 import com.blizpear.testAppCCS.feature.database.database.ExchangeDatabase
 import dagger.Module
 import dagger.Provides
@@ -36,6 +36,6 @@ object DatabaseModule {
 
 	@Provides
 	@Singleton
-	fun providePopularDao(db: ExchangeDatabase): ExchangeDao =
-		db.exchangeDao()
+	fun providePopularDao(db: ExchangeDatabase): PopularDao =
+		db.popularDao()
 }

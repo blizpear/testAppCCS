@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="favorite_screen_exchange">%1$s : %2$s</string>
-	<string name="favorite_screen_toolbar">Избранное</string>
-	<string name="favorite_screen_error">В избранном пусто</string>
-	<string name="favorite_screen_retry">Поискать еще</string>
-	<string name="favorite_screen_currency">Текущая валюта: %1$s</string>
-</resources>
