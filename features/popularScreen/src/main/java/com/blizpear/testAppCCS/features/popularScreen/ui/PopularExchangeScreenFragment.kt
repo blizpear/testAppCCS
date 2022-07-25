@@ -109,7 +109,9 @@ class PopularExchangeScreenFragment :
 			content.isVisible = true
 
 			binding.currency.text = getString(R.string.currency, state.baseCurrency)
-			exchangeAdapter.submitList(state.data)
+			exchangeAdapter.submitList(state.data) {
+				binding.exchangeList.scrollToPosition(0)
+			}
 		}
 	}
 
