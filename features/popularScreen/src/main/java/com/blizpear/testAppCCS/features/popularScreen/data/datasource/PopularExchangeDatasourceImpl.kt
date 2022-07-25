@@ -1,9 +1,9 @@
 package com.blizpear.testAppCCS.features.popularScreen.data.datasource
 
-import com.blizpear.testAppCCS.feature.database.dao.FavoritesDao
 import com.blizpear.testAppCCS.feature.database.dao.ExchangeDao
-import com.blizpear.testAppCCS.feature.database.entities.FavoritesEntity
+import com.blizpear.testAppCCS.feature.database.dao.FavoritesDao
 import com.blizpear.testAppCCS.feature.database.entities.ExchangeEntity
+import com.blizpear.testAppCCS.feature.database.entities.FavoritesEntity
 import com.blizpear.testAppCCS.features.popularScreen.data.api.ExchangeApi
 import com.blizpear.testAppCCS.features.popularScreen.data.models.PopularExchangeModel
 import kotlinx.coroutines.flow.Flow

@@ -2,8 +2,8 @@ package com.blizpear.testAppCCS.feature.database.di
 
 import android.content.Context
 import androidx.room.Room
-import com.blizpear.testAppCCS.feature.database.dao.FavoritesDao
 import com.blizpear.testAppCCS.feature.database.dao.ExchangeDao
+import com.blizpear.testAppCCS.feature.database.dao.FavoritesDao
 import com.blizpear.testAppCCS.feature.database.database.ExchangeDatabase
 import dagger.Module
 import dagger.Provides

@@ -10,7 +10,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 object RetrofitProvider {
 
-	//	private const val BASE_URL = "https://api.fer.ee/"
 	private const val BASE_URL = "https://api.apilayer.com/exchangerates_data/"
 
 	private val httpLoggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
