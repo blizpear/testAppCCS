@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(
 	tableName = "popular_table"
 )
-data class PopularEntity(
+data class ExchangeEntity(
 	@PrimaryKey(autoGenerate = false)
 	val currencyName: String,
 	val currencyValue: Double,
