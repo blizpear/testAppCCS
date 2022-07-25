@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<com.google.android.material.appbar.MaterialToolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?actionBarSize"
+		style="@style/Widget.MaterialComponents.Toolbar.Primary">
+
+		<TextView
+			android:id="@+id/title_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="@dimen/layout_margin_16dp"
+			android:text="@string/change_currency_toolbar"
+			android:textSize="@dimen/text_size_toolbar"
+			android:textStyle="bold"
+			android:maxLines="1"
+			android:ellipsize="end"
+			android:textColor="?attr/colorOnPrimary"/>
+	</com.google.android.material.appbar.MaterialToolbar>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:id="@+id/error"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center_horizontal"
+			android:orientation="vertical"
+			android:visibility="gone">
+
+			<TextView
+				android:id="@+id/error_text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:text="@string/change_currency_error_text"/>
+
+			<Button
+				android:id="@+id/retry_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/change_currency_reply"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:visibility="visible"
+			android:orientation="vertical"
+			android:divider="?android:dividerHorizontal"
+			android:showDividers="middle"
+			tools:visibility="visible">
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/currencies_list"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/height_0"
+				android:layout_weight="0.9"/>
+
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/button_apply"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/height_0"
+				android:layout_margin="@dimen/margin_8"
+				android:layout_weight="0.1"
+				android:text="@string/change_currency_apply"/>
+
+		</LinearLayout>
+
+		<ProgressBar
+			android:id="@+id/progress_bar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:visibility="gone"/>
+	</FrameLayout>
+</LinearLayout>

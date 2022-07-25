@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="change_currency_toolbar">Смена базовой валюты</string>
+	<string name="change_currency_error_text">Произошла ошибка</string>
+	<string name="change_currency_reply">Повторить</string>
+	<string name="change_currency_apply">Применить</string>
+</resources>
