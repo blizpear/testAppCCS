@@ -21,6 +21,7 @@ dependencies {
 	implementation Dependencies.RECYCLER_VIEW
 	implementation Dependencies.FRAGMENT
 
+	implementation project(":features:changeCurrencyScreen")
 	implementation project(":shared:network")
 	implementation project(":shared:database")
 	implementation project(":shared:ui")

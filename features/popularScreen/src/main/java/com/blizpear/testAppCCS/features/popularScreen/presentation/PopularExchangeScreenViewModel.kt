@@ -4,10 +4,12 @@ import android.content.SharedPreferences
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.blizpear.testAppCCS.feature.changecurrencyscreen.getChangeCurrencyScreen
 import com.blizpear.testAppCCS.features.popularScreen.domain.usecase.GetPopularExchangeUseCase
 import com.blizpear.testAppCCS.features.popularScreen.domain.usecase.SaveFavoritesUseCase
 import com.blizpear.testAppCCS.features.popularScreen.domain.usecase.UpdateLocalStorageUseCase
 import com.blizpear.testAppCCS.shared.filterdialog.FilterType
+import com.github.terrakok.cicerone.Router
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -21,7 +23,8 @@ class PopularExchangeScreenViewModel @Inject constructor(
 	private val getPopularExchangeUseCase: GetPopularExchangeUseCase,
 	private val updateLocalStorageUseCase: UpdateLocalStorageUseCase,
 	private val saveFavoritesUseCase: SaveFavoritesUseCase,
-	private val sharedPreferences: SharedPreferences
+	private val sharedPreferences: SharedPreferences,
+	private val router: Router
 ) : ViewModel() {
 
 	private val _state = MutableStateFlow<PopularExchangeState>(PopularExchangeState.Initialize)
@@ -85,7 +88,7 @@ class PopularExchangeScreenViewModel @Inject constructor(
 		}
 	}
 
-	fun updateBaseCurrency(value: String?){
+	fun updateBaseCurrency(value: String?) {
 		if (!value.isNullOrBlank() && _baseCurrency != value) {
 			setToSharedPref(value)
 			_baseCurrency = value
@@ -101,7 +104,7 @@ class PopularExchangeScreenViewModel @Inject constructor(
 		}
 	}
 
-	fun setFavorite(currencyName: String)  {
+	fun setFavorite(currencyName: String) {
 		if (_state.value is PopularExchangeState.Content) {
 			viewModelScope.launch {
 				val exchangesList = (_state.value as PopularExchangeState.Content).data
@@ -146,5 +149,12 @@ class PopularExchangeScreenViewModel @Inject constructor(
 				}
 			}
 		}
+	}
+
+	fun onChangeCurrencyClick() {
+		router.setResultListener("CHANGE_CURRENCY") {
+			updateBaseCurrency(it as String)
+		}
+		router.navigateTo(getChangeCurrencyScreen())
 	}
 }
